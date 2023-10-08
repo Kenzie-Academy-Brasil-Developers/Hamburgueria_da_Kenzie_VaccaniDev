@@ -1,23 +1,23 @@
-import { useState } from "react";
 import Logo from "../../assets/Logo.svg";
 import { MdSearch, MdShoppingCart } from "react-icons/md";
+import styles from "./style.module.scss"
 
-export const Header = () => {
-   const [value, setValue] = useState("");
+export const Header = ({ search, setSearch, setIsOpen, cartList}) => {
 
    return (
-      <header>
+      <header className={styles.header}>
          <img src={Logo} alt="Logo Kenzie Burguer" />
          <div>
-            <button>
+            <button onClick={() => setIsOpen(true)}>
+               
                 <MdShoppingCart size={21} />
-                <span>0</span>
+                <span className="title2">{cartList.length}</span>
             </button>
-            <form>
+            <form hidden>
                <input
                   type="text"
-                  value={value}
-                  onChange={(e) => setValue(e.target.value)}
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
                />
                <button type="submit">
                  <MdSearch size={21} />

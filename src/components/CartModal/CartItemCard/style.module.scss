@@ -1,0 +1,26 @@
+.li{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    
+    .divProduct{
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    img{
+        background-color: var(--grey-3);
+        height: 5.5rem;
+        border-radius: 12px;
+
+    }
+    button{
+        color: var(--grey-button);
+        border: none;
+        background-color: #fff;
+    }
+}

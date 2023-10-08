@@ -1,0 +1,14 @@
+.ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;    
+}
+@media (max-width: 1020px){
+    .ul{
+        display: default;
+        width: 100%;
+        max-width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+}

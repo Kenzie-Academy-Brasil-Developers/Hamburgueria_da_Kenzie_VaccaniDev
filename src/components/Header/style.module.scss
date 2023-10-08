@@ -1,0 +1,30 @@
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    padding: 1.25rem 8%; 
+    justify-content: space-between;
+    background-color: var(--grey-4);
+
+    button{
+        display: flex;
+        border: none;
+        color: var(--grey-2);
+        background-color: var(--grey-4);
+        span{
+            position: relative;
+            top:-14px;
+            right: 6px;
+            background-color: var(--primary);
+            padding: 2px 5px;
+            border-radius: 7px;
+        }
+    }
+
+}
+@media (max-width: 1020px){
+    .header{
+        padding:1.25rem 1rem;
+    }
+}

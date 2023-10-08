@@ -1,0 +1,44 @@
+.title1{
+    //Name Product
+    color: var(--grey-1);
+    font-family: Inter;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+.title2{
+    //Button Add
+    color: #FFF;
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.price{
+    //Price product
+    color: var(--color-primary, #27AE60);
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+.paragraph{
+    //Total Value and Subtittle
+    color: var(--grey-2);
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.modalTitle{
+    color: var(--white);
+font-family: Inter;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 700;
+line-height: 1.75rem;
+}
