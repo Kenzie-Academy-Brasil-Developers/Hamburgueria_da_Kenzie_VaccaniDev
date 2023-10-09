@@ -5,6 +5,8 @@ import { ProductList } from "../../components/ProductList";
 import { api } from "../../services/api";
 import { useEffect } from "react";
 import "../../styles/index.scss"
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 export const HomePage = () => {
    const localCartList = localStorage.getItem("@CARDLIST");
@@ -37,7 +39,7 @@ export const HomePage = () => {
       if (!cartList.some(prod => prod.id === product.id)) {
          setCartList([...cartList, product]);
       } else {
-         alert("Produto já adicionado!");
+         toast.error("Produto já adicionado!");
       }
    };
 
