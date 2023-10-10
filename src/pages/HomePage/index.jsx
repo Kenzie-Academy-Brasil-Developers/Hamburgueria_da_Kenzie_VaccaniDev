@@ -16,20 +16,12 @@ export const HomePage = () => {
    const [isOpen, setIsOpen] = useState(false);
 
    useEffect(() => {
-      const timeout = setTimeout(() => {
-
-         const getProducts = async () => {
-            try {
-               const { data } = await api.get("/products", { params: { search } });
-               setProductList(data);
-            } catch (error) {
-               console.log(error);
-            }
-         };
-         getProducts();
-      }, 500);
-      return () => clearTimeout(timeout)
-   }, [search])
+      const getProducts = async () => {
+         const { data } = await api.get("products");
+         setProductList(data);
+      }
+      getProducts();
+   }, [])
 
    useEffect(() => {
       localStorage.setItem("@CARDLIST", JSON.stringify(cartList))
@@ -51,19 +43,13 @@ export const HomePage = () => {
    const removeCard = () => {
       setCartList([]);
    }
-   // useEffect montagem - carrega os produtos da API e joga em productList
-   // useEffect atualização - salva os produtos no localStorage (carregar no estado)
-   // adição, exclusão, e exclusão geral do carrinho
-   // renderizações condições e o estado para exibir ou não o carrinho
-   // filtro de busca
-   // estilizar tudo com sass de forma responsiva
 
    return (
       <>
-         <Header search={search} setSearch={setSearch} setIsOpen={setIsOpen} cartList={cartList}/>
+         <Header search={search} setSearch={setSearch} setIsOpen={setIsOpen} cartList={cartList} />
          <main>
             <ProductList productList={productList} setCartList={setCartList} addCartList={addCartList} />
-            {isOpen ? <CartModal cartList={cartList} removeCardList={removeCardList} setIsOpen={setIsOpen} removeCard={removeCard}/> : null}
+            {isOpen ? <CartModal cartList={cartList} removeCardList={removeCardList} setIsOpen={setIsOpen} removeCard={removeCard} /> : null}
          </main>
       </>
    );
