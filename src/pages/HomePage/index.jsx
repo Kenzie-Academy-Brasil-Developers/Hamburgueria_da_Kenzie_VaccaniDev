@@ -4,9 +4,9 @@ import { Header } from "../../components/Header";
 import { ProductList } from "../../components/ProductList";
 import { api } from "../../services/api";
 import { useEffect } from "react";
-import "../../styles/index.scss"
+import "../../styles/index.scss";
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'
+import 'react-toastify/dist/ReactToastify.css';
 
 export const HomePage = () => {
    const localCartList = localStorage.getItem("@CARDLIST");

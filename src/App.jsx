@@ -1,5 +1,5 @@
-import { HomePage } from "./pages/HomePage"
-import { ToastContainer } from "react-toastify"
+import { HomePage } from "./pages/HomePage";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
